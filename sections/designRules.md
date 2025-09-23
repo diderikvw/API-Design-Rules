@@ -168,7 +168,7 @@ A resource that corresponds to a single conceptual entity is referred to as a [=
       <dt>Statement</dt>
       <dd>
          <div>
-            <p>Query keys in a [=URI=] MUST only contain letters and digits, where the first letter of each word is capitalized, except for the first letter of the entire compound word. This is also known as <a href="https://developer.mozilla.org/en-US/docs/Glossary/Camel_case">lower camelCase</a>. This also implies that diacritics MUST be normalized and special characters MUST be omitted.
+            <p>Query keys in a [=URI=] MUST only contain letters and digits, where the first letter of each word is capitalized, except for the first letter (MUST NOT be a digit) of the entire compound word. This is also known as <a href="https://developer.mozilla.org/en-US/docs/Glossary/Camel_case">lower camelCase</a>. This also implies that diacritics MUST be normalized and special characters MUST be omitted.
          </div>
       </dd>
       <dt>Rationale</dt>
@@ -179,6 +179,8 @@ A resource that corresponds to a single conceptual entity is referred to as a [=
             <pre class="nohighlight example-correct">https://api.example.org/v1/gebouwen?typeGebouw=woning</pre>
             <p>URI query key not using camelCase (incorrect):</p>
             <pre class="nohighlight example-incorrect">https://api.example.org/v1/gebouwen?type-gebouw=woning</pre>
+            <p>URI query key starts with digit (incorrect):</p>
+            <pre class="nohighlight example-incorrect">https://api.example.org/v1/gebouwen?2ndReviewer=alice</pre>
          </div>
       </dd>
       <dt>How to test</dt>
