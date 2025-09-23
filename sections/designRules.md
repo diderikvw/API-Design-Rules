@@ -130,7 +130,7 @@ A resource that corresponds to a single conceptual entity is referred to as a [=
 Although the REST architectural style does not impose a specific protocol, REST APIs are typically implemented using HTTP [[rfc9110]].
 
 <span id="api-03"></span>
-<div class="rule" id="/core/http-methods" data-type="technical">
+<div class="rule" id="/core/http-methods" data-type="functional">
    <p class="rulelab">Only apply standard HTTP methods</p>
    <dl>
       <dt>Statement</dt>
@@ -239,10 +239,6 @@ Although the REST architectural style does not impose a specific protocol, REST 
             The OpenAPI Specification 3.0 <a href="https://spec.openapis.org/oas/v3.0.1#path-item-object">Path Item Object</a> also supports these methods, except for <code>CONNECT</code>.
             <p>In addition to the standard HTTP methods, a server may support other optional methods as well, e.g. <code>PROPFIND</code>, <code>COPY</code>, <code>PURGE</code>, <code>VIEW</code>, <code>LINK</code>, <code>UNLINK</code>, <code>LOCK</code>, <code>UNLOCK</code>, etc.
          </div>
-      </dd>
-      <dt>How to test</dt>
-      <dd>
-         Analyse the OpenAPI Description to confirm all supported methods are either `get`, `post`, `put`, `patch`, `delete`, `head`, `options` or `trace`.
       </dd>
    </dl>
 </div>
