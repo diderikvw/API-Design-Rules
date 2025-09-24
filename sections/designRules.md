@@ -187,7 +187,7 @@ A resource that corresponds to a single conceptual entity is referred to as a [=
       <dd>
          Loop all resource paths in the OpenAPI Description and check that all query keys use letters, digits in camelCase. You can use the following regex for each query key:
          <div class="example">
-            <pre><code>^\$?[a-z][a-z0-9]*([A-Z][\w0-9]*)*$</code></pre>
+            <pre><code>^\$?[a-z][a-z\d]*([A-Z][a-z\d]*)*$</code></pre>
          </div>
       </dd>
    </dl>
